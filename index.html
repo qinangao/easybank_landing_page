@@ -22,23 +22,59 @@
   </head>
   <body>
     <header>
-      <nav>Home About Contact Blog Careers Request Invite</nav>
+      <nav class="nav">
+        <img src="./images/logo.svg" class="nav_logo" id="logo" alt="logo" />
+        <ul class="nav_links">
+          <li class="nav_item">
+            <a class="nav_link" href="#">Home</a>
+          </li>
+
+          <li class="nav_item">
+            <a class="nav_link" href="#">About</a>
+          </li>
+
+          <li class="nav_item">
+            <a class="nav_link" href="#">Contact</a>
+          </li>
+
+          <li class="nav_item">
+            <a class="nav_link" href="#">Blog</a>
+          </li>
+
+          <li class="nav_item">
+            <a class="nav_link" href="#">Careers</a>
+          </li>
+
+          <li class="nav_item">
+            <a class="nav_link nav_link_btn btn--show-modal" href="#"
+              >Open account</a
+            >
+          </li>
+        </ul>
+      </nav>
+
       <div class="header_title">
-        <div class="backgroung">
+        <div class="background">
           <img
-            class="backgroung_moblie"
+            class="backgroung_moblie_phone"
             src="./images/image-mockups.png"
             alt="image-mockups"
           />
-          <img src="./images/bg-intro-mobile.svg" alt="bg-intro-mobile" />
+          <img
+            class="background_img"
+            src="./images/bg-intro-mobile.svg"
+            alt="bg-intro-mobile"
+          />
         </div>
-        <h1>Next generation digital banking</h1>
-        <p>
-          Take your financial life online. Your Easybank account will be a
-          one-stop-shop for spending, saving, budgeting, investing, and much
-          more.
-        </p>
-        <button>Request Invite</button>
+        <div class="hero">
+          <h1>Next generation digital banking</h1>
+          <p>
+            Take your financial life online. Your Easybank account will be a
+            one-stop-shop for spending, saving, budgeting, investing, and much
+            more.
+          </p>
+          <button>Request Invite</button>
+        </div>
       </div>
     </header>
     <section class="section" id="section--1">
@@ -101,7 +137,11 @@
       <div class="section_articles">
         <div class="article article--1">
           <div class="news">
-            <img src="./images/image-currency.jpg" alt="image-currency" />
+            <img
+              class="article_img"
+              src="./images/image-currency.jpg"
+              alt="image-currency"
+            />
             <p class="author">By Claire Robinson</p>
             <h3 class="news_header">
               Receive money in any currency with no fees
@@ -114,7 +154,11 @@
         </div>
         <div class="article article--2">
           <div class="news">
-            <img src="./images/image-restaurant.jpg" alt="image-restaurant" />
+            <img
+              class="article_img"
+              src="./images/image-restaurant.jpg"
+              alt="image-restaurant"
+            />
             <p class="author">By Wilson Hutton</p>
             <h3 class="news_header">
               Treat yourself without worrying about money
@@ -127,7 +171,11 @@
         </div>
         <div class="article article--3">
           <div class="news">
-            <img src="./images/image-plane.jpg" alt="image-plane" />
+            <img
+              class="article_img"
+              src="./images/image-plane.jpg"
+              alt="image-plane"
+            />
             <p class="author">By Wilson Hutton</p>
             <h3 class="news_header">Take your Easybank card wherever you go</h3>
             <p class="news_text">
@@ -138,7 +186,11 @@
         </div>
         <div class="article article--4">
           <div class="news">
-            <img src="./images/image-confetti.jpg" alt="image-confetti" />
+            <img
+              class="article_img"
+              src="./images/image-confetti.jpg"
+              alt="image-confetti"
+            />
             <p class="author">By Claire Robinson</p>
             <h3 class="news_header">
               Our invite-only Beta accounts are now live!
@@ -154,8 +206,71 @@
     </section>
 
     <footer class="footer">
-      About Us Contact Blog Careers Support Privacy Policy
-      <button>Request Invite</button>
+      <img src="./images/logo-footer.svg" alt="footer-logo" />
+      <ul class="soical_media_links">
+        <li class="soical_media_item">
+          <img
+            class="soical_media_link"
+            src="./images/icon-facebook.svg"
+            alt="icon-facebook"
+            href="#"
+          />
+        </li>
+        <li class="soical_media_item">
+          <img
+            class="soical_media_link"
+            src="./images/icon-youtube.svg"
+            alt="icon-facebook"
+            href="#"
+          />
+        </li>
+        <li class="soical_media_item">
+          <img
+            class="soical_media_link"
+            src="./images/icon-twitter.svg"
+            alt="icon-facebook"
+            href="#"
+          />
+        </li>
+        <li class="soical_media_item">
+          <img
+            class="soical_media_link"
+            src="./images/icon-pinterest.svg"
+            alt="icon-facebook"
+            href="#"
+          />
+        </li>
+        <li class="soical_media_item">
+          <img
+            class="soical_media_link"
+            src="./images/icon-instagram.svg"
+            alt="icon-facebook"
+            href="#"
+          />
+        </li>
+      </ul>
+      <ul class="footer_nav">
+        <li class="footer_item">
+          <a class="footer_link" href="#"> About Us</a>
+        </li>
+        <li class="footer_item">
+          <a class="footer_link" href="#">Contact</a>
+        </li>
+        <li class="footer_item">
+          <a class="footer_link" href="#"> Blog</a>
+        </li>
+        <li class="footer_item">
+          <a class="footer_link" href="#">Careers</a>
+        </li>
+        <li class="footer_item">
+          <a class="footer_link" href="#"> Support </a>
+        </li>
+        <li class="footer_item">
+          <a class="footer_link" href="#">Privacy Policy</a>
+        </li>
+      </ul>
+
+      <button class="btn btn--show-modal">Open account</button>
       <p class="footer_copyright">© Easybank. All Rights Reserved</p>
     </footer>
 
