@@ -26,9 +26,7 @@ body {
 .section,
 .features_feature,
 .section_title,
-.news,
-.hero,
-.article {
+.hero {
   /* max-width: 700px; */
   display: flex;
   flex-direction: column;
@@ -43,12 +41,20 @@ h3 {
   color: var(--Dark-Blue);
   font-weight: 400;
 }
+h1,
+h2 {
+  font-size: 40px;
+}
+p {
+  line-height: 30px;
+}
 .hero,
 .section {
-  padding: 30px;
+  padding: 40px 35px 60px 35px;
+  margin-bottom: 20px;
 }
-.news {
-  background-color: var(--white);
+.article_container {
+  background-color: white;
 }
 #section--1 {
   background-color: var(--Light-Grayish-Blue);
@@ -56,6 +62,45 @@ h3 {
 .article_img {
   /* width: 350px; */
   width: 100%;
+}
+.features_feature {
+  padding-top: 30px;
+}
+.features_header {
+  margin: 0;
+  padding-top: 20px;
+}
+.icon_img {
+  width: 80px;
+}
+.hero_text {
+  padding-bottom: 30px;
+}
+.btn {
+  width: 230px;
+  height: 60px;
+  border-radius: 30px;
+  border-color: transparent;
+  background: linear-gradient(90deg, var(--Lime-Green), var(--Bright-Cyan));
+  color: var(--White);
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin: 20px 0 20px 0;
+  cursor: pointer;
+}
+.news {
+  text-align: left;
+}
+.article_container {
+  padding: 25px;
+}
+.news_text {
+  padding-bottom: 15px;
+}
+.author {
+  font-size: 16px;
+  margin: 0;
 }
 /*HEADER*/
 
@@ -109,6 +154,10 @@ h3 {
 
 .btn_menu_close {
   display: none;
+  cursor: pointer;
+}
+.btn_menu_open {
+  cursor: pointer;
 }
 
 .nav_link {
@@ -122,4 +171,44 @@ h3 {
 /*Footer*/
 .footer {
   background-color: var(--Dark-Blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.soical_media_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 0;
+}
+.footer_item,
+.soical_media_item {
+  list-style-type: none;
+  text-align: center;
+}
+.soical_media_icon {
+  width: 35px;
+}
+.footer_logo {
+  width: 230px;
+  padding: 60px 0 30px 0;
+}
+.footer_nav {
+  padding: 0;
+  line-height: 40px;
+}
+.footer_link {
+  color: var(--Grayish-Blue);
+  text-decoration: none;
+  font-size: 20px;
+}
+.attribution {
+  padding-bottom: 30px;
+}
+.attribution a {
+  text-decoration: none;
+  color: var(--Grayish-Blue);
 }
