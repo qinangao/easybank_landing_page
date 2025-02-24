@@ -6,15 +6,15 @@
   --Bright-Cyan: hsl(192, 70%, 51%);
   --Grayish-Blue: hsl(233, 8%, 62%);
   --Light-Grayish-Blue: hsl(220, 16%, 96%);
-  --Very-Light-Gray: hsl(0, 0%, 98%);
-  --White: hsl(0, 0%, 100%);
+  --Very-Light-Gray: rgb(250, 250, 250);
+  --White: rgb(255, 255, 255);
 }
 /*Moblie verson*/
 
 body {
   font-family: "Public Sans", serif;
   font-size: 18px;
-  background-color: var(--White);
+  background-color: var(--Very-Light-Gray);
   color: var(--Grayish-Blue);
   display: flex;
   flex-direction: column;
@@ -43,6 +43,16 @@ h3 {
   color: var(--Dark-Blue);
   font-weight: 400;
 }
+.hero,
+.section {
+  padding: 30px;
+}
+.news {
+  background-color: var(--white);
+}
+#section--1 {
+  background-color: var(--Light-Grayish-Blue);
+}
 
 /*HEADER*/
 .background {
@@ -58,7 +68,8 @@ h3 {
 }
 
 .article_img {
-  width: 350px;
+  /* width: 350px; */
+  width: 100%;
 }
 
 /*Footer*/
