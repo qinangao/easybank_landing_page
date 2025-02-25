@@ -21,7 +21,7 @@
   </style> -->
   </head>
   <body>
-    <nav class="nav">
+    <nav class="nav moblie_nav">
       <div class="logo_container">
         <img src="./images/logo.svg" class="nav_logo" id="logo" alt="logo" />
         <img
@@ -63,9 +63,40 @@
         </li>
       </ul>
     </nav>
+
+    <nav class="nav desktop_nav">
+      <div class="logo_container">
+        <img src="./images/logo.svg" class="nav_logo" id="logo" alt="logo" />
+      </div>
+      <div class="nav_links_container">
+        <ul class="nav_links nav_links_desktop">
+          <li class="nav_item">
+            <a class="nav_link" href="#">Home</a>
+          </li>
+
+          <li class="nav_item">
+            <a class="nav_link" href="#">About</a>
+          </li>
+
+          <li class="nav_item">
+            <a class="nav_link" href="#">Contact</a>
+          </li>
+
+          <li class="nav_item">
+            <a class="nav_link" href="#">Blog</a>
+          </li>
+
+          <li class="nav_item">
+            <a class="nav_link" href="#">Careers</a>
+          </li>
+        </ul>
+      </div>
+      <button class="btn">Request invite</button>
+    </nav>
+
     <header>
       <div class="header_title">
-        <div class="background">
+        <div class="background background_moblie">
           <img
             class="backgroung_moblie_phone"
             src="./images/image-mockups.png"
@@ -85,6 +116,18 @@
             more.
           </p>
           <button class="btn">Open account</button>
+        </div>
+        <div class="background background_desktop">
+          <img
+            class="backgroung_moblie_phone"
+            src="./images/image-mockups.png"
+            alt="image-mockups"
+          />
+          <img
+            class="background_desktop_img"
+            src="./images/bg-intro-desktop.svg"
+            alt="bg-intro-mobile"
+          />
         </div>
       </div>
     </header>
