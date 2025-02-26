@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  /* align-items: center; */
   margin: 0;
 }
 /* General Element */
@@ -77,13 +77,13 @@ p {
   padding-bottom: 30px;
 }
 .btn {
-  width: 230px;
+  width: 200px;
   height: 60px;
   border-radius: 30px;
   border-color: transparent;
   background: linear-gradient(90deg, var(--Lime-Green), var(--Bright-Cyan));
   color: var(--White);
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 1px;
   font-weight: 600;
   margin: 20px 0 20px 0;
@@ -221,8 +221,9 @@ p {
 
 @media only screen and (min-width: 1040px) {
   body {
-    font-size: 25px;
-    background-color: var(--Very-Light-Gray);
+    font-size: 20px;
+    /* background-color: var(--Very-Light-Gray); */
+    background-color: bisque;
   }
   /*header*/
   .background_moblie {
@@ -234,27 +235,35 @@ p {
   }
   .header_title {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    padding-left: 100px;
   }
   .background_desktop_img {
     position: relative;
     width: 100%;
-
-    left: 300px;
   }
   .backgroung_moblie_phone {
     width: 75%;
-    left: 400px;
     z-index: 10;
   }
-
+  .hero {
+    align-items: flex-start;
+    width: 1000px;
+  }
+  .hero_text {
+    text-align: left;
+  }
+  h1 {
+    font-size: 50px;
+    text-align: left;
+  }
   /*Nav*/
   .moblie_nav {
     display: none;
   }
   .desktop_nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     background-color: white;
     height: 130px;
@@ -262,11 +271,36 @@ p {
   .nav_links_desktop {
     display: flex;
     justify-content: center;
-    gap: 80px;
+    gap: 50px;
     flex-direction: row;
     list-style-type: none;
+    padding: 0;
   }
   .nav_logo {
-    width: 300px;
+    width: 250px;
+  }
+  .features,
+  .section_articles {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+  .features_feature {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .section_title {
+    align-items: flex-start;
+    text-align: left;
+    width: 800px;
+    padding: 40px 0 40px 0;
+  }
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 150px 40px 150px;
   }
 }
