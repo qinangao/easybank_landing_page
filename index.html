@@ -92,7 +92,8 @@
             </li>
           </ul>
         </div>
-        <button class="btn btn__nav">Request invite</button>
+
+        <button class="btn btn__nav btn-show-modal">Open Account</button>
       </nav>
     </header>
     <main>
@@ -108,7 +109,26 @@
               one-stop-shop for spending, saving, budgeting, investing, and much
               more.
             </p>
-            <button class="btn btn-primary">Open account</button>
+            <div class="hero_btn_container">
+              <button class="btn btn-primary btn-show-modal">
+                Open Account
+              </button>
+              <div class="sign-in-container">
+                <button class="btn btn-sign-in">
+                  <img
+                    class="user__logo"
+                    src="./images/user-svgrepo-com .svg"
+                    alt="user"
+                  />
+
+                  Log in to<br />
+                  Online Banking
+                </button>
+              </div>
+            </div>
+            <button class="btn_learnmore btn_scroll_to">
+              Learn More &darr;
+            </button>
           </div>
           <div class="hero__img">
             <img
@@ -342,7 +362,7 @@
           </ul>
         </div>
         <div class="footer__btn__copyright">
-          <button class="btn footer__btn btn--show-modal">Open account</button>
+          <button class="btn footer__btn btn-show-modal">Open Account</button>
           <p class="footer_copyright">© Easybank. All Rights Reserved</p>
 
           <div class="attribution">
@@ -355,6 +375,21 @@
           </div>
         </div>
       </footer>
+      <div class="modal hidden">
+        <button class="btn-close-modal">&#215;</button>
+        <img class="modal__logo" src="./images/logo.svg" alt="logo__modal" />
+        <h3 class="modal__header">Open your account in 5 minutes</h3>
+        <form class="modal__form">
+          <label>First Name:</label>
+          <input type="text" />
+          <label>Last Name:</label>
+          <input type="text" />
+          <label>Email:</label>
+          <input type="email" />
+        </form>
+        <button class="btn">Next Step &rarr;</button>
+      </div>
+      <div class="overlay hidden"></div>
     </main>
     <script src="script.js"></script>
   </body>
