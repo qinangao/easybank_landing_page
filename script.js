@@ -21,22 +21,37 @@ btnMenuClose.addEventListener("click", function () {
 
 //Modal Window
 
-const modal = document.querySelector(".modal");
-const btnModalClose = document.querySelector(".btn-close-modal");
+const registerModal = document.querySelector(".register-modal");
+const btnModalClose = document.querySelectorAll(".btn-close-modal");
 const btnModalOpen = document.querySelectorAll(".btn-show-modal");
 const overlay = document.querySelector(".overlay");
-//Open modal
+const btnSignInModalShow = document.querySelector(".btn-sign-in");
+const signInModal = document.querySelector(".sign-in-modal");
+console.log(btnModalClose);
+
+const openModal = function (e) {
+  e.preventDefault();
+  registerModal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+
+const closeModal = function (e) {
+  e.preventDefault();
+  registerModal.classList.add("hidden");
+  overlay.classList.add("hidden");
+  signInModal.classList.add("hidden");
+};
 
 btnModalOpen.forEach((btn) => {
-  btn.addEventListener("click", function (e) {
-    e.preventDefault();
-    modal.classList.remove("hidden");
-    overlay.classList.remove("hidden");
-  });
+  btn.addEventListener("click", openModal);
 });
 
-btnModalClose.addEventListener("click", function (e) {
+btnSignInModalShow.addEventListener("click", function (e) {
   e.preventDefault();
-  modal.classList.add("hidden");
-  overlay.classList.add("hidden");
+  signInModal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+});
+
+btnModalClose.forEach((btn) => {
+  btn.addEventListener("click", closeModal);
 });

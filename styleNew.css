@@ -279,7 +279,8 @@ p {
 }
 
 /* Modal Window */
-.modal {
+.register-modal,
+.sign-in-modal {
   position: fixed;
   z-index: 1000;
   top: 50%;
@@ -304,27 +305,71 @@ p {
   border: none;
   background: none;
 }
-.modal__form {
+.register__modal__form,
+.signin__modal__form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
   padding-bottom: 30px;
 }
-.modal__form input {
+.register__modal__form input {
   height: 30px;
   width: 300px;
 }
-.modal__form label {
+.register__modal__form label {
   color: var(--Dark-Blue);
 }
-.modal__logo {
+.register__modal__logo {
   width: 300px;
 }
-.modal__header {
+.register__modal__header {
   font-size: 25px;
   font-weight: 600;
   font-style: inherit;
+}
+/* Sign-in Modal */
+.checkbox__container {
+  display: flex;
+}
+.checkbox__container p {
+  font-size: 15px;
+  margin: 0;
+}
+.sign-in-input {
+  height: 25px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid var(--Grayish-Blue);
+}
+.input--1 {
+  width: 300px;
+}
+.input--2 {
+  width: 224px;
+}
+.select-code {
+  height: 45px;
+  border-width: 1px;
+  border-radius: 10px;
+  border: 1px solid var(--Grayish-Blue);
+}
+.signin__modal__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+.highlight {
+  font-weight: bold;
+  color: var(--Dark-Blue);
+  font-size: 25px;
+}
+.signin__modal__header p {
+  margin: 0;
+}
+.signin__modal__form label {
+  color: var(--Dark-Blue);
 }
 .hidden {
   visibility: hidden;
@@ -516,10 +561,8 @@ p {
     top: 40px;
   }
   .phone__img {
-    /* width: 100%; */
     top: -150px;
     order: 1;
-    /* max-height: 550px; */
     max-width: 700px;
     max-height: 820px;
     inset: 0;
@@ -635,5 +678,35 @@ p {
     text-align: center;
     width: 80%;
     order: 2;
+  }
+  .register-modal,
+  .sign-in-modal {
+    width: 200px;
+  }
+  .register__modal__form label,
+  .signin__modal__form label {
+    font-size: 15px;
+  }
+  .register__modal__form input {
+    width: 200px;
+  }
+  .register__modal__header {
+    font-size: 22px;
+  }
+  .register__modal__logo {
+    width: 200px;
+  }
+  .input--1 {
+    width: 220px;
+  }
+
+  .input--2 {
+    width: 140px;
+  }
+  .highlight {
+    font-size: 18px;
+  }
+  .signin__modal__header {
+    width: 100%;
   }
 }

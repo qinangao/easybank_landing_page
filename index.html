@@ -375,11 +375,15 @@
           </div>
         </div>
       </footer>
-      <div class="modal hidden">
+      <div class="register-modal hidden">
         <button class="btn-close-modal">&#215;</button>
-        <img class="modal__logo" src="./images/logo.svg" alt="logo__modal" />
-        <h3 class="modal__header">Open your account in 5 minutes</h3>
-        <form class="modal__form">
+        <img
+          class="register__modal__logo"
+          src="./images/logo.svg"
+          alt="logo__modal"
+        />
+        <h3 class="register__modal__header">Open your account in 5 minutes</h3>
+        <form class="register__modal__form">
           <label>First Name:</label>
           <input type="text" />
           <label>Last Name:</label>
@@ -388,6 +392,41 @@
           <input type="email" />
         </form>
         <button class="btn">Next Step &rarr;</button>
+      </div>
+      <div class="sign-in-modal">
+        <button class="btn-close-modal">&#215;</button>
+        <img class="modal__logo" src="./images/logo.svg" alt="logo__modal" />
+        <div class="signin__modal__header">
+          <p>Log in to <span class="highlight">Digtal Banking</span></p>
+        </div>
+        <form class="signin__modal__form">
+          <label>Account Number:</label>
+          <input
+            class="sign-in-input input--1"
+            type="number"
+            placeholder="e.g 12345678"
+          />
+          <label class="checkbox__container">
+            <input type="checkbox" />
+            <p>Remember my account number</p>
+          </label>
+          <label>Phone Number:</label>
+          <div class="phoneNumber__container">
+            <select class="select-code" id="phone_number">
+              <option>+44(GB)</option>
+              <option>+45(DK)</option>
+              <option>+46(SE)</option>
+            </select>
+            <input
+              class="sign-in-input input--2"
+              type="number"
+              name="phoneNumber"
+              placeholder="e.g 7777333444"
+              inputmode="numeric"
+            />
+          </div>
+        </form>
+        <button class="btn">Log in</button>
       </div>
       <div class="overlay hidden"></div>
     </main>
