@@ -166,15 +166,15 @@ p {
 .btn-sign-in {
   background: transparent;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 10px;
   border: 2px solid var(--Bright-Cyan);
   margin: 0;
   color: var(--Dark-Blue);
-  font-size: 15px;
+  font-size: 20px;
   text-align: left;
   line-height: 20px;
+  padding-left: 20px;
+  gap: 20px;
 }
 .btn:hover {
   color: var(--Dark-Blue);
@@ -412,7 +412,7 @@ p {
   .btn-sign-in {
     margin: 20px 0 10px 0;
     width: 180px;
-    font-size: 13px;
+    font-size: 18px;
   }
   .btn_learnmore {
     font-size: 18px;
