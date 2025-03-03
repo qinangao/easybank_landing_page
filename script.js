@@ -83,3 +83,13 @@ nav.addEventListener("mouseover", function (e) {
 nav.addEventListener("mouseout", function (e) {
   handleHover(e, 1);
 });
+
+//Sticky navigation
+const obsCallback = function () {};
+const obsOptions = {
+  root: null,
+  threshold: 0.1,
+};
+const section2 = document.querySelector("#container--2");
+const observer = new IntersectionObserver();
+observer.observe(section2);
