@@ -87,6 +87,10 @@ p {
   width: 100%;
   z-index: 10;
 }
+.sticky {
+  position: fixed;
+  opacity: 0.9;
+}
 .nav_links_desktop {
   display: flex;
   justify-content: center;
