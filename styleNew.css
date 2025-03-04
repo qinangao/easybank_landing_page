@@ -43,7 +43,13 @@ p {
 .article {
   width: 22%;
 }
-
+.container--active {
+  transition: transform 2s, opacity 2s;
+}
+.container--hidden {
+  opacity: 0;
+  transform: translateY(6rem);
+}
 /*HERO*/
 .hero {
   display: flex;
@@ -217,9 +223,9 @@ p {
 .footer {
   background-color: var(--Dark-Blue);
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  padding: 80px 200px;
+  justify-content: space-between;
+  padding: 80px 180px;
 }
 .footer__logo__contacts {
   display: flex;
@@ -229,7 +235,7 @@ p {
 .footer__links {
   display: flex;
   justify-content: flex-start;
-  gap: 150px;
+  gap: 130px;
 }
 .footer__links ul {
   padding: 0;
