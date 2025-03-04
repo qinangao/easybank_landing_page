@@ -6,6 +6,16 @@ const btnMenuOpen = document.querySelector(".btn_menu_open");
 const btnMenuClose = document.querySelector(".btn_menu_close");
 const menuContainer = document.querySelector(".nav_links");
 
+const registerModal = document.querySelector(".register-modal");
+const btnModalClose = document.querySelectorAll(".btn-close-modal");
+const btnModalOpen = document.querySelectorAll(".btn-show-modal");
+const overlay = document.querySelector(".overlay");
+const btnSignInModalShow = document.querySelector(".btn-sign-in");
+const signInModal = document.querySelector(".sign-in-modal");
+
+const nav = document.querySelector(".desktop_nav");
+const hero = document.querySelector(".hero");
+
 btnMenuOpen.addEventListener("click", function (e) {
   e.preventDefault();
   menuContainer.style.display = "block";
@@ -20,14 +30,6 @@ btnMenuClose.addEventListener("click", function () {
 });
 
 //Modal Window
-
-const registerModal = document.querySelector(".register-modal");
-const btnModalClose = document.querySelectorAll(".btn-close-modal");
-const btnModalOpen = document.querySelectorAll(".btn-show-modal");
-const overlay = document.querySelector(".overlay");
-const btnSignInModalShow = document.querySelector(".btn-sign-in");
-const signInModal = document.querySelector(".sign-in-modal");
-
 const openModal = function (e) {
   e.preventDefault();
   registerModal.classList.remove("hidden");
@@ -56,7 +58,6 @@ btnModalClose.forEach((btn) => {
 });
 
 //Navigation animation
-const nav = document.querySelector(".desktop_nav");
 
 const handleHover = function (e, opacity) {
   if (
@@ -85,11 +86,38 @@ nav.addEventListener("mouseout", function (e) {
 });
 
 //Sticky navigation
-const obsCallback = function () {};
-const obsOptions = {
-  root: null,
-  threshold: 0.1,
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  // console.log(entry);
+  if (!entry.isIntersecting) nav.classList.add("sticky");
+  else nav.classList.remove("sticky");
 };
-const section2 = document.querySelector("#container--2");
-const observer = new IntersectionObserver();
-observer.observe(section2);
+
+const heroObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: "-120px",
+});
+heroObserver.observe(hero);
+
+//Reveal Sections
+
+const activeContainer = document.querySelectorAll(".container--active");
+const revealSection = function (entries, observer) {
+  console.log(entries);
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.remove("container--hidden");
+    observer.unobserve(entry.target);
+  });
+};
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+activeContainer.forEach(function (container) {
+  sectionObserver.observe(container);
+  container.classList.add("container--hidden");
+});
