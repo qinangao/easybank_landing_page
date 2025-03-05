@@ -10,6 +10,9 @@
   --White: rgb(255, 255, 255);
 }
 /*General Element*/
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Public Sans", serif;
@@ -42,6 +45,10 @@ p {
 .features_feature,
 .article {
   width: 22%;
+  transition: transform 0.2s;
+}
+.article:hover {
+  transform: scale(1.1);
 }
 .container--active {
   transition: transform 2s, opacity 2s;
