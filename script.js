@@ -102,10 +102,9 @@ const heroObserver = new IntersectionObserver(stickyNav, {
 heroObserver.observe(hero);
 
 //Reveal Sections
-
 const activeContainer = document.querySelectorAll(".container--active");
 const revealSection = function (entries, observer) {
-  console.log(entries);
+  // console.log(entries);
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
     entry.target.classList.remove("container--hidden");
@@ -119,5 +118,89 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 
 activeContainer.forEach(function (container) {
   sectionObserver.observe(container);
-  container.classList.add("container--hidden");
+  // container.classList.add("container--hidden");
 });
+
+//Slider
+const sliders = function () {
+  const slides = document.querySelectorAll(".slide");
+  const btnLeft = document.querySelector(".slider__btn--left");
+  const btnRight = document.querySelector(".slider__btn--right");
+  const dotContainer = document.querySelector(".dots");
+  let currentSlide = 0;
+  const maxSlide = slides.length;
+
+  //Functions
+  const creatDots = function () {
+    slides.forEach((s, i) => {
+      dotContainer.insertAdjacentHTML(
+        "beforeend",
+        `<button class="dots__dot" data-slide="${i}"></button>`
+      );
+    });
+  };
+
+  const activateDot = function (slide) {
+    document
+      .querySelectorAll(".dots__dot")
+      .forEach((dot) => dot.classList.remove("dots__dot--active"));
+
+    document
+      .querySelector(`.dots__dot[data-slide="${slide}"]`)
+      .classList.add("dots__dot--active");
+  };
+
+  const goToSlice = function (slide) {
+    slides.forEach((s, i) => {
+      s.style.transform = `translateX(${100 * (i - slide)}%)`;
+    });
+  };
+
+  const nextSlide = function () {
+    if (currentSlide === maxSlide - 1) {
+      currentSlide = 0;
+    } else {
+      currentSlide++;
+    }
+    goToSlice(currentSlide);
+    activateDot(currentSlide);
+  };
+
+  const previousSlide = function () {
+    if (currentSlide === 0) {
+      currentSlide = maxSlide - 1;
+    } else {
+      currentSlide--;
+    }
+
+    goToSlice(currentSlide);
+    activateDot(currentSlide);
+  };
+  const init = function () {
+    goToSlice(0);
+    creatDots();
+    activateDot(0);
+  };
+  init();
+
+  //EventListener
+  btnRight.addEventListener("click", nextSlide);
+
+  btnLeft.addEventListener("click", previousSlide);
+
+  document.addEventListener("keydown", function (e) {
+    // console.log(e);
+    if (e.key === "ArrowLeft") previousSlide();
+    if (e.key === "ArrowRight") nextSlide();
+  });
+
+  dotContainer.addEventListener("click", function (e) {
+    if (e.target.classList.contains("dots__dot")) {
+      // console.log(e.target.dataset.slide);
+      currentSlide = Number(e.target.dataset.slide);
+      goToSlice(currentSlide);
+      activateDot(currentSlide);
+    }
+  });
+};
+sliders();
