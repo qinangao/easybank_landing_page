@@ -118,7 +118,7 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 
 activeContainer.forEach(function (container) {
   sectionObserver.observe(container);
-  // container.classList.add("container--hidden");
+  container.classList.add("container--hidden");
 });
 
 //Slider
