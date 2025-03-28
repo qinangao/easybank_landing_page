@@ -333,7 +333,6 @@ p {
 .slider__btn {
   position: absolute;
   top: 50%;
-  z-index: 100;
   border: none;
   background: var(--Light-Grayish-Blue);
   color: #333;
@@ -365,8 +364,8 @@ p {
   border: none;
   background-color: var(--Grayish-Blue);
   opacity: 0.7;
-  height: 13px;
-  width: 5px;
+  height: 12px;
+  width: 10px;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.5s;
@@ -657,6 +656,16 @@ p {
     bottom: 15%;
   }
 }
+@media only screen and (min-width: 770px) and (max-width: 980px) {
+  .dots {
+    bottom: 10%;
+  }
+  .slider__btn {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+}
 /* Medium screen */
 @media only screen and (max-width: 768px) {
   h1,
@@ -837,9 +846,6 @@ p {
     width: 70px;
   }
   .slider__btn {
-    /* height: 40px;
-    width: 40px;
-    font-size: 25px; */
     display: none;
   }
 
