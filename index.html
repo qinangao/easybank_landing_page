@@ -280,7 +280,7 @@
         </div>
       </section>
 
-      <section class="container container--active" id="container--3">
+      <section class="container container--active" id="container--4">
         <div class="testimonial__body">
           <div class="review__title">
             <div class="review__text">
@@ -319,7 +319,7 @@
                     alt="user"
                     class="testimonial__photo"
                   />
-                  <h6 class="testimonial__name">Aarav Lynn</h6>
+                  <p class="testimonial__name">Aarav Lynn</p>
                   <p class="testimonial__location">San Francisco, USA</p>
                 </address>
               </div>
@@ -342,7 +342,7 @@
                     alt="user"
                     class="testimonial__photo"
                   />
-                  <h6 class="testimonial__name">Miyah Miles</h6>
+                  <p class="testimonial__name">Miyah Miles</p>
                   <p class="testimonial__location">London, UK</p>
                 </address>
               </div>
@@ -366,7 +366,7 @@
                     alt="user"
                     class="testimonial__photo"
                   />
-                  <h6 class="testimonial__name">Andrei Rasacan</h6>
+                  <p class="testimonial__name">Andrei Rasacan</p>
                   <p class="testimonial__location">Manchester, UK</p>
                 </address>
               </div>
@@ -391,7 +391,6 @@
                 class="soical_media_icon"
                 src="./images/icon-facebook.svg"
                 alt="icon-facebook"
-                href="#"
               />
             </li>
             <li class="soical_media_item">
@@ -399,7 +398,6 @@
                 class="soical_media_icon"
                 src="./images/icon-youtube.svg"
                 alt="icon-facebook"
-                href="#"
               />
             </li>
             <li class="soical_media_item">
@@ -407,7 +405,6 @@
                 class="soical_media_icon"
                 src="./images/icon-twitter.svg"
                 alt="icon-facebook"
-                href="#"
               />
             </li>
             <li class="soical_media_item">
@@ -415,7 +412,6 @@
                 class="soical_media_icon"
                 src="./images/icon-pinterest.svg"
                 alt="icon-facebook"
-                href="#"
               />
             </li>
             <li class="soical_media_item">
@@ -423,7 +419,6 @@
                 class="soical_media_icon"
                 src="./images/icon-instagram.svg"
                 alt="icon-facebook"
-                href="#"
               />
             </li>
           </ul>
@@ -499,7 +494,7 @@
           />
           <label class="checkbox__container">
             <input type="checkbox" />
-            <p>Remember my account number</p>
+            <span>Remember my account number</span>
           </label>
           <label>Phone Number:</label>
           <div class="phoneNumber__container">
@@ -510,10 +505,11 @@
             </select>
             <input
               class="sign-in-input input--2"
-              type="number"
+              type="tel"
               name="phoneNumber"
               placeholder="e.g 7777333444"
               inputmode="numeric"
+              pattern="[0-9]*"
             />
           </div>
         </form>
